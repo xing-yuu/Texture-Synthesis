@@ -689,7 +689,7 @@ void ImageQuilting::Getdistance(Mat* coll, Mat* colr, Mat* rol, int X, int Y) {
 
 void ImageQuilting::ImageGenerate()
  {
-	/*
+	
 	for (int YY = 0; YY < num_y; YY++) {
 //		cout << "generate layer: " << YY + 1 << endl;
 		int startY = YY * select_y - OverlapY;
@@ -733,7 +733,7 @@ void ImageQuilting::ImageGenerate()
 							for (int temx = 0; temx < OverlapX; temx++) {
 								tem_rol->at<uchar>(temy - startY , temx + OverlapX + select_x) = quilting_results->at<uchar>(temy, temx);
 							}
-						}
+						}*/
 					}
 					else {//第N行其他块，需要前块的信息，
 						for (int temy = startY; temy < startY + OverlapY; temy++) {
@@ -779,30 +779,7 @@ void ImageQuilting::ImageGenerate()
 	//		cout << " finish!" << endl;
 		}
 		//waitKey(1000);
-	}*/
-	Mat image(400, 200, CV_8UC3);
-	for (int i = 0; i <= 199; ++i) {
-		//获取第i行首像素指针 
-		double bi = i / 200.0;
-		Vec3b* p2 = image.ptr<Vec3b>(i);
-		for (int j = 0; j < image.cols; ++j) {
-			//将img的bgr转为image的rgb 
-			p2[j][2] = 255;
-			p2[j][1] = bi * 255;
-			p2[j][0] = 0;
-		}
-		cout << bi << endl;
 	}
-	for (int i = 200; i < image.rows; ++i) {
-		//获取第i行首像素指针 
-		double bi = (400-i) / 200.0;
-		Vec3b* p2 = image.ptr<Vec3b>(i);
-		for (int j = 0; j < image.cols; ++j) {
-			//将img的bgr转为image的rgb 
-				p2[j][2] = bi * 255;
-				p2[j][1] = 255;
-				p2[j][0] = 0;
-		}
-	}
-	imwrite("D:/PROJECT/Handcrafted 3d printing/TestImg/7772.jpg", image);
+	
+	imwrite("./result_Img/RES.jpg", *quilting_results);
 }

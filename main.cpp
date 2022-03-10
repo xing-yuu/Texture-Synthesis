@@ -9,7 +9,7 @@ int main()
 {
 	clock_t start, finish;
 	start = clock();
-	ImageQuilting thepic("D:/PROJECT/Handcrafted 3d printing/TestImg/20.png",20 ,20,20,20);
+	ImageQuilting thepic("./TestImg/5.jpg",20 ,20,20,20);
 	thepic.ImageGenerate();
 	finish = clock();
 	double Total_time = (double)(finish - start);
