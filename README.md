@@ -3,8 +3,10 @@
 Image quilting based on image features.Combine small resolution images into large resolution images.
 
 Add edge alignment that can be seamlessly attached to cylinder-like models.
+
 ##Input
 ![Input](Input.jpg)
+
 ##Output
 ![Output](Output.jpg)
 
