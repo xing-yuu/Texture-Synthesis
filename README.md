@@ -4,10 +4,11 @@ Image quilting based on image features.Combine small resolution images into larg
 
 Add edge alignment that can be seamlessly attached to cylinder-like models.
 
-## Input
+## Result
+### Input
 ![Input](Input.jpg)
 
-## Output
+### Output
 ![Output](Output.jpg)
 
 
